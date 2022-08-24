@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Table, Card, Image, Button, Modal, Form, FloatingLabel, Spinner } from 'react-bootstrap';
 import NotLoggedInView from './NoLoggedInView';
-import FirestoreService from '../FirestoreService';
+import FirestoreService from '../services/firestoreService';
 import imagee from "../images/image.jpg"
 
 import firebase from 'firebase/compat/app';
@@ -29,17 +29,6 @@ function User(props) {
             setUser(null);
         }
     })
-
-    function fetchUsers() {
-        setIsLoading(true);
-        FirestoreService.getAllUsers().then((response) => {
-            setIsLoading(false);
-            setUsers(response._delegate._snapshot.docChanges);
-        }).catch((e) => {
-            setIsLoading(false);
-            alert("Error occured while fetching the user. " + e);
-        })
-    }
 
     const [showAddEditForm, setShowAddEditForm] = useState(false);
     const [addEditFormType, setAddEditFormType] = useState('Add'); //Add, Edit

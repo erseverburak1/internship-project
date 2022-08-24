@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, Form, Button, Image } from 'react-bootstrap';
+import { Card, Form, Button } from 'react-bootstrap';
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Card, Image, Button, Modal, Form, FloatingLabel, Spinner } from 'react-bootstrap';
 import NotLoggedInView from './NoLoggedInView';
-import FirestoreService from '../FirestoreService';
+import FirestoreService from '../services/firestoreService';
 import imagee from "../images/image.jpg"
 
 import firebase from 'firebase/compat/app';
