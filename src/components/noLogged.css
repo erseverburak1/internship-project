@@ -1,0 +1,14 @@
+
+body{
+    text-align: center;
+}
+
+Image{
+    display: flex;
+
+    justify-content: center;
+  
+    align-items: center;
+  
+    background: #282c64;
+}
