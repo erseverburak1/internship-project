@@ -3,12 +3,12 @@ import 'firebase/compat/firestore';
 import {getAuth} from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCm7-s4qd0YQe89wYHK-ib3_Gkk5vonjbc",
-  authDomain: "internship-project-2d609.firebaseapp.com",
-  projectId: "internship-project-2d609",
-  storageBucket: "internship-project-2d609.appspot.com",
-  messagingSenderId: "584897743787",
-  appId: "1:584897743787:web:2f27e1c90d40a5b5c0e0ee"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_DATABASE_URL,
+  storageBucket: process.env.REACT_APP_PROJECT_ID,
+  messagingSenderId: process.env.REACT_APP_STORAGE_BUCKET,
+  appId: process.env.REACT_APP_MESSAGING_SENDER_ID
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
